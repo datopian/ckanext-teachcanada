@@ -81,7 +81,7 @@
       <h2>{{ g.site_description }}</h2>{% endif %} {% endif %} {% endblock %}
     </hgroup>
 
-    <div class="collapse navbar-collapse" id="main-navigation-toggle">
+    <div class="collapse navbar-collapse navbar-float" id="main-navigation-toggle" >
       {% block header_site_navigation %}
       <nav class="section navigation">
         <ul class="nav nav-pills">
@@ -94,7 +94,9 @@
 	    {% endblock %}
         </ul>
       </nav>
+      </div>
       {% endblock %} {% block header_site_search %}
+      <div class="collapse navbar-collapse " id="main-navigation-toggle"> 
       <form class="section site-search simple-input" action="{% url_for 'dataset.search' %}" method="get">
         <div class="field">
           <label for="field-sitewide-search">{% block header_site_search_label %}{{ _('Search Datasets') }}{% endblock %}</label>
