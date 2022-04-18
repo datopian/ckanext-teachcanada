@@ -42,6 +42,12 @@
   color: #ed1c24;
 }
 
+.btn-success {
+  color: #fff;
+  background-color: #ed1c24;
+  border-color: #ed1c24;
+}
+
 body, body p, body div, body ul, body a {
   font-family: "proxima-nova",sans-serif;
 }
