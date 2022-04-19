@@ -65,9 +65,9 @@
   {% endif %} {% endblock %}
   <div class="container">
     <div class="navbar-right">
-      <button data-target="#main-navigation-toggle" data-toggle="collapse" class="navbar-toggle collapsed" type="button" aria-label="expand or collapse" aria-expanded="false">
+      <button data-target="#main-navigation-toggle" data-toggle="collapse" class="navbar-toggle collapsed ttoggle" type="button" aria-label="expand or collapse" aria-expanded="false">
         <span class="sr-only">{{ _('Toggle navigation') }}</span>
-        <span class="fa fa-bars"></span>
+        <span class="fa fa-bars fa-3x" id="tgl"></span>
       </button>
     </div>
     <hgroup class="{{ g.header_class }} navbar-left">
@@ -108,4 +108,8 @@
     </div>
   </div>
 </header>
+{% block scripts %}
+  {% asset 'teachcanada/toggle-js' %}
 {% endblock %}
+{% endblock %}
+

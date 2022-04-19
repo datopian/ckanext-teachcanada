@@ -18,3 +18,13 @@ home_css:
   output: ckanext-teachcanada/%(version)s-home.css
   contents:
     - home.css
+
+
+toggle-js:
+  filter: rjsmin
+  output: ckanext-datopian/%(version)s-toggle.js
+  contents:
+    - js/togglefa.js
+  extra:
+    preload:
+      - base/main

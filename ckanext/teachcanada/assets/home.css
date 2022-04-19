@@ -1016,17 +1016,8 @@ button.active {
 @media only screen and (max-width: 768px) {
   .navbar-toggle {
     margin-right: 20px !important;
-    background-color: #003164;
+    background-color: #fff;
     padding: 6px 10px;
-  }
-  .navbar-toggle:hover {
-    background-color: #003164 !important;
-  }
-  .navbar-toggle:focus {
-    background-color: #003164 !important;
-  }
-  .navbar-toggle:active {
-    background-color: #003164 !important;
   }
   .media-grid .media-item {
     width: 100% !important;
@@ -1041,3 +1032,16 @@ button.active {
     padding: 0px !important;
   }
 }
+
+.fa-navicon:before, .fa-reorder:before, .fa-times:before {
+  content: "\f0c9";
+  color: black;
+  font-weight: bold;
+}
+
+.fa-navicon:before, .fa-reorder:before, .fa-bars:before {
+  content: "\f0c9";
+  color: black;
+  font-weight: bold;
+}
+
