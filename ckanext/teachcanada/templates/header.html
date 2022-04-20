@@ -88,23 +88,16 @@
             {% block header_site_navigation_tabs %}
 		{{ h.build_nav_main(
 		    ('dataset.search', _('Datasets')),
-		    ('organization.index', _('Organizations')),
-		    ('group.index', _('Groups')),
-		    ('home.about', _('About')) ) }}
+        ('home.about', _('School Data')),
+        ('home.about', _('Resource Bank')),
+        ('home.about', _('Feedback')),
+        ('home.about', _('Comunity Forum')),
+        ('home.about', _('Teacher Matching')) ) }}
 	    {% endblock %}
         </ul>
       </nav>
       </div>
-      {% endblock %} {% block header_site_search %}
-      <div class="collapse navbar-collapse " id="main-navigation-toggle"> 
-      <form class="section site-search simple-input" action="{% url_for 'dataset.search' %}" method="get">
-        <div class="field">
-          <label for="field-sitewide-search">{% block header_site_search_label %}{{ _('Search Datasets') }}{% endblock %}</label>
-          <input id="field-sitewide-search" type="text" class="form-control" name="q" placeholder="{{ _('Search') }}" aria-label="{{ _('Search datasets') }}"/>
-          <button class="btn-search" type="submit" aria-label="{{ _('Submit') }}"><i class="fa fa-search"></i></button>
-        </div>
-      </form>
-      {% endblock %}
+      {% endblock %} 
     </div>
   </div>
 </header>

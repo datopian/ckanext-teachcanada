@@ -34,7 +34,7 @@
 .btn {
   -webkit-border-radius: 30px;
   border-radius: 30px;
-  padding: 10px 20px;
+  padding: 5px 20px;
 }
 
 .fa-eye:before {
@@ -58,13 +58,14 @@ body {
 
 h1,
 h2 {
+  font-family: "proxima-nova",sans-serif;
   font-weight: 400;
 }
 h3,
 h4,
 h5,
 h6 {
-  font-family: 'Readex Pro', sans-serif;
+  font-family: "proxima-nova",sans-serif;
   font-weight: 400;
 }
 h1 {
@@ -160,7 +161,7 @@ img {
 }
 .account-masthead {
   padding: 0px 0;
-  background: #003164;
+  background: #ed1c24;
 }
 .site-footer {
   margin-top:150px;
@@ -932,7 +933,7 @@ button.active {
 
 .account-masthead {
   padding: 0px 0;
-  background: #a94442;
+  background: #ed1c24;
 }
 .nav-item.active > a, .nav-aside li.active a {
   position: relative;
@@ -946,6 +947,10 @@ button.active {
 }
 .masthead .nav li a:hover {
   color: #000;
+}
+
+.homepage .module-search .module-content .heading {
+  line-height: inherit !important;
 }
 
 .btn-default {
