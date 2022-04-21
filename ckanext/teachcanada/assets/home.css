@@ -133,10 +133,13 @@ img {
   }
 }
 .hero {
-  background: #fff url('/base/images/hero-bg.png') !important;
-  background-size: auto 120% !important;
-  background-repeat: no-repeat !important;
-  background-position: right top !important;
+  padding: 100px 0 85px 0;
+  background-color: #00274A !important;
+  background-image: url('/base/images/springbanner5.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
 }
 [role=main] {
   min-height: 400px;
@@ -1050,3 +1053,30 @@ button.active {
   font-weight: bold;
 }
 
+
+.btn-home {
+  padding-top:10px;
+  padding-bottom: 10px; 
+  margin-left: 4px; 
+  margin-right: 4px;
+  background-color:#ed1c24 ; 
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-home a {
+  color: white;
+  text-decoration: none;
+}
+
+.btn-home:hover {
+  background-color: white;
+  color: black;
+  border-color: #ed1c24;
+  border-radius: 10px;
+  border: 1px solid #ed1c24;
+}
+
+.btn-home a:hover {
+  color: black;
+}
