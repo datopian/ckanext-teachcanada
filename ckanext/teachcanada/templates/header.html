@@ -67,7 +67,7 @@
     <div class="navbar-right">
       <button data-target="#main-navigation-toggle" data-toggle="collapse" class="navbar-toggle collapsed ttoggle" type="button" aria-label="expand or collapse" aria-expanded="false">
         <span class="sr-only">{{ _('Toggle navigation') }}</span>
-        <span class="fa fa-bars fa-3x" id="tgl"></span>
+        <span class="fa fa-bars " id="tgl"></span>
       </button>
     </div>
     <hgroup class="{{ g.header_class }} navbar-left">
@@ -87,11 +87,11 @@
         <ul class="nav nav-pills">
             {% block header_site_navigation_tabs %}
 		{{ h.build_nav_main(
-		    ('dataset.search', _('Datasets')),
         ('home.about', _('School Data')),
+        ('home.about', _('Ways TO Participate')),
         ('home.about', _('Resource Bank')),
+        ('home.about', _('Community Forum')),
         ('home.about', _('Feedback')),
-        ('home.about', _('Comunity Forum')),
         ('home.about', _('Teacher Matching')) ) }}
 	    {% endblock %}
         </ul>
