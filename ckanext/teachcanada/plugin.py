@@ -1,7 +1,7 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 from flask import Blueprint, render_template
-
+from ckanext.teachcanada.blueprints import form_blueprint
 
 def hello_plugin():
     return u'Hello from the Datopian Theme extension'
@@ -22,10 +22,6 @@ class TeachCanadaPlugin(plugins.SingletonPlugin):
     # IBlueprint
 
     def get_blueprint(self):
-        u'''Return a Flask Blueprint object to be registered by the app.'''
-        # Create Blueprint for plugin
-        blueprint = Blueprint(self.name, self.__module__)
-        blueprint.template_folder = u'templates'
-        # Add plugin url rules to Blueprint object
-        blueprint.add_url_rule('/hello_plugin', '/hello_plugin', hello_plugin)
-        return blueprint
+        return [
+            form_blueprint
+        ]

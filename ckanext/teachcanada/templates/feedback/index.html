@@ -1,0 +1,30 @@
+{% extends "page.html" %}
+
+{% block subtitle %}{{ _('Feedback') }}{% endblock %}
+
+{% block breadcrumb_content %}
+  <li>{% link_for _('Feedbacks'), named_route='home.index' %}</li>
+{% endblock %}
+
+{% block page_header %}{% endblock %}
+
+
+{% block primary_content_inner %}
+  <div id="ff-compose"></div>
+  <script async defer
+    src="https://formfacade.com/include/108284333429055936990/form/1FAIpQLSe1FOgUNkPht8hK7nLoOlOV6UmE3XrV21F6IFBbIpYTm8pfJw/classic.js?div=ff-compose"></script>
+{% endblock %}
+
+{% block secondary_content %}
+  <div class="module module-narrow module-shallow">
+    <h2 class="module-heading">
+      FeedBack
+    </h2>
+    <div class="module-content">
+      <p>
+        Give feedback to the community work.
+      </p>
+    </div>
+  </div>
+  
+{% endblock %}

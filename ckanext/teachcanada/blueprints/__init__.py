@@ -1,0 +1,1 @@
+from .googleform import form_blueprint
