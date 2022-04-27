@@ -1,0 +1,32 @@
+{% extends "page.html" %}
+
+{% block subtitle %}{{ _('Feedback') }}{% endblock %}
+
+{% block breadcrumb_content %}
+<li>{% link_for _('Feedbacks'), named_route='home.index' %}</li>
+{% endblock %}
+
+{% block page_header %}{% endblock %}
+
+
+{% block primary_content_inner %}
+<div id="ff-compose"></div>
+<script async defer
+  src="https://formfacade.com/include/101622548568919050331/form/1FAIpQLSfoihNI1vD74Qx8eLHrdb6l_ffbeLtdtVIwxsv4vOe2XYLQ7Q/classic.js?div=ff-compose"></script>
+
+
+{% endblock %}
+
+{% block secondary_content %}
+<div class="module module-narrow module-shallow">
+  <h2 class="module-heading">
+    FeedBack
+  </h2>
+  <div class="module-content">
+    <p>
+      Feedbacks about the Data Portal and how it can be improved.
+    </p>
+  </div>
+</div>
+
+{% endblock %}
