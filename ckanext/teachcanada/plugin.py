@@ -12,7 +12,6 @@ def hello_plugin():
 class TeachCanadaPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IBlueprint)
-    plugins.implements(plugins.IRoutes,  inherit=True)
     plugins.implements(plugins.IClick)
 
     # IConfigurer
