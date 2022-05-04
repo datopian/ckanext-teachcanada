@@ -1,7 +1,9 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 from flask import Blueprint, render_template
-from ckanext.teachcanada.blueprints import form_blueprint
+from ckanext.teachcanada.blueprints import form_blueprint, participate
+from ckanext.teachcanada.cli import get_commands
+
 
 def hello_plugin():
     return u'Hello from the Datopian Theme extension'
@@ -10,6 +12,7 @@ def hello_plugin():
 class TeachCanadaPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IBlueprint)
+    plugins.implements(plugins.IClick)
 
     # IConfigurer
 
@@ -23,5 +26,10 @@ class TeachCanadaPlugin(plugins.SingletonPlugin):
 
     def get_blueprint(self):
         return [
-            form_blueprint
+            form_blueprint,
+            participate
         ]
+
+    #IClick
+    def get_commands(self):
+        return get_commands()
