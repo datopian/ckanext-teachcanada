@@ -26,6 +26,20 @@ def addwaystoparticipate():
     click.secho(u"Way to Participate added to ckanext_pages Table", fg=u"green")
 
 
+@teachcanada.command()
+def addresourcebank():
+    metadata = meta.metadata
+    group = metadata.tables['group']
+    query = group.insert().values(
+        title="Resource Bank", name="resource-bank",
+        type='group',
+    )
+    connection = model.Session.connection()
+    connection.execute(query)
+    model.Session.commit()
+    click.secho(u"Add Resource Bank to Group", fg=u"green")
+
+
 
 
 
