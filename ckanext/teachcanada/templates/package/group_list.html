@@ -5,9 +5,19 @@
   <h2 class="hide-heading">{{ _('Groups') }}</h2>
 
   {% if group_dropdown %}
+    {% set drop_down = []%}
+    {% for opt in group_dropdown %}
+      {% if pkg_dict.name == 'teach-canada'%}
+        {{drop_down if drop_down.append(opt)}}
+      {% else %}
+        {% if opt[1] != 'Resource Bank' %}
+          {{drop_down if drop_down.append(opt)}}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
     <form class="add-to-group" method="post">
       <select id="field-add_group" name="group_added" data-module="autocomplete">
-        {% for option in group_dropdown %}
+        {% for option in drop_down %}
           <option value="{{ option[0] }}"> {{ option[1] }}</option>
         {% endfor %}
       </select>
