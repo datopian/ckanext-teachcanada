@@ -96,10 +96,32 @@
           ('forums.dataset', _('Community Forum')),
           ('teachcanada.form_page', _('Feedback')),
           ('home.about', _('Teacher Matching')) ) }}
+          <li>
+            <div>
+            <button data-target="#side-navigation-toggle" data-toggle="collapse" class="side-toggle collapsed ttoggle"
+              type="button" aria-label="expand or collapse" aria-expanded="false">
+              <span class="sr-only">{{ _('Toggle navigation') }}</span>
+              <span class="fa fa-bars " id="tgl"></span>
+            </button>
+            </div>
+          </li>
           {% endblock %}
         </ul>
+        <div class="collapse" id="side-navigation-toggle">
+          <nav class="section navigation">
+            <ul class="nav nav-pills">
+              
+            {{ h.build_nav_main(
+            ('dataset.search', _('Datasets')),
+            ('organization.index', _('Organizations')) ) }}
+              
+            </ul>
+          </nav>
+        </div>
       </nav>
+
     </div>
+    
     {% endblock %}
   </div>
   </div>
