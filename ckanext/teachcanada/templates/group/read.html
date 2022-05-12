@@ -1,6 +1,12 @@
 {% extends "group/read_base.html" %}
 
 {% block primary_content_inner %}
+    {% if h.check_access('package_create') %}
+      <div class="page_primary_action">
+        {{ h.snippet ('snippets/add_dataset.html', dataset_type=dataset_type, group=group_dict.get('id')) }}
+      </div>
+    {% endif %}
+
   {% block groups_search_form %}
     {% set facets = {
       'fields': fields_grouped,
@@ -33,8 +39,13 @@
   <div class="filters">
     <div>
       {% for facet in facet_titles %}
-        {{ h.snippet('snippets/facet_list.html', title=facet_titles[facet], name=facet, extras={'id':group_dict.id}) }}
+        {% if group_dict.get('name') == 'resource-bank' %}
+          {{ h.snippet('snippets/facet_list.html', title=facet_titles[facet], name=facet) }}
+        {% else %}
+          {{ h.snippet('snippets/facet_list.html', title=facet_titles[facet], name=facet, extras={'id':group_dict.id}) }}
+        {% endif %}
       {% endfor %}
+      
     </div>
     <a class="close no-text hide-filters"><i class="fa fa-times-circle"></i><span class="text">close</span></a>
   </div>

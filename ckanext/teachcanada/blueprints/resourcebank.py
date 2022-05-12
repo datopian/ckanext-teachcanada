@@ -18,7 +18,7 @@ def register_group_plugin_rules(blueprint):
         u'unfollow', u'admins', u'activity'
     ]
 
-    blueprint.add_url_rule('/', methods=[u'GET'], view_func=read)
+    blueprint.add_url_rule('/resourc-bank', methods=[u'GET'], view_func=read)
     blueprint.add_url_rule(
         u'/edit/<id>', view_func=EditGroupView.as_view(str(u'edit')))
     blueprint.add_url_rule(
