@@ -1,7 +1,7 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 from flask import Blueprint, render_template
-from ckanext.teachcanada.blueprints import form_blueprint, participate, resourcebank
+from ckanext.teachcanada.blueprints import form_blueprint, participate, resourcebank, school_blueprint
 from ckanext.teachcanada.cli import get_commands
 
 
@@ -28,7 +28,8 @@ class TeachCanadaPlugin(plugins.SingletonPlugin):
         return [
             form_blueprint,
             participate,
-            resourcebank
+            resourcebank,
+            school_blueprint
         ]
 
     #IClick
