@@ -91,15 +91,13 @@
           {% block header_site_navigation_tabs %}
           {{ h.build_nav_main(
           ('schooldata.page', _('School Data')),
-          ('participate.show', _('Ways TO Participate')),
-          ('resourcebank.read', _('Resource Bank')),
-          ('forums.dataset', _('Community Forum')),
-          ('teachcanada.form_page', _('Feedback')),
-          ('home.about', _('Teacher Matching')) ) }}
+          ('dataset.search', _('Datasets')),
+          ('home.about', _('Research Projects')),
+          ('teachcanada.form_page', _('Feedback')) )}}
           <li>
             <div>
             <button data-target="#side-navigation-toggle" data-toggle="collapse" class="side-toggle collapsed ttoggle"
-              type="button" aria-label="expand or collapse" aria-expanded="false">
+              type="button" aria-label="expand or collapse" aria-expanded="false" style="float: right;">
               <span class="sr-only">{{ _('Toggle navigation') }}</span>
               <span class="fa fa-bars " id="tgl"></span>
             </button>
@@ -108,11 +106,13 @@
           {% endblock %}
         </ul>
         <div class="collapse" id="side-navigation-toggle">
-          <nav class="section navigation">
+          <nav class="section navigation" >
             <ul class="nav nav-pills">
               
             {{ h.build_nav_main(
-            ('dataset.search', _('Datasets')),
+            ('resourcebank.read', _('Resource Bank')),
+            ('participate.show', _('Ways TO Participate')),
+            ('forums.dataset', _('Community Forum')),
             ('organization.index', _('Community partners')) ) }}
               
             </ul>
