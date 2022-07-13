@@ -1047,12 +1047,28 @@ button.active {
   .organization-pg .primary .module-content {
     padding: 0px !important;
   }
+  
+}
+
+/* .bar-toggle {
+  margin-left: 230px;
+  width:800px;
+} */
+
+@media only screen and (min-width: 1280px) {
+  .bar-toggle {
+    width: 900px;
+  }
+
+  .bar-tabtoggle {
+    margin-left: 300px !important;
+  }
 }
 
 .fa-navicon:before, .fa-reorder:before, .fa-times:before {
   content: "\f0c9";
   color: black;
-  font-weight: bold;
+  font-weight:lighter;
 }
 
 .fa-navicon:before, .fa-reorder:before, .fa-bars:before {

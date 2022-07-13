@@ -69,7 +69,7 @@
       <button data-target="#main-navigation-toggle" data-toggle="collapse" class="navbar-toggle collapsed ttoggle"
         type="button" aria-label="expand or collapse" aria-expanded="false">
         <span class="sr-only">{{ _('Toggle navigation') }}</span>
-        <span class="fa fa-bars " id="tgl"></span>
+        <span class="fa fa-bars fa-3x" id="tgl"></span>
       </button>
     </div>
     <hgroup class="{{ g.header_class }} navbar-left">
@@ -84,7 +84,7 @@
       <h2>{{ g.site_description }}</h2>{% endif %} {% endif %} {% endblock %}
     </hgroup>
 
-    <div class="collapse navbar-collapse navbar-float" id="main-navigation-toggle">
+    <div class="collapse navbar-collapse navbar-float " id="main-navigation-toggle">
       {% block header_site_navigation %}
       <nav class="section navigation">
         <ul class="nav nav-pills">
@@ -94,30 +94,24 @@
           ('dataset.search', _('Datasets')),
           ('home.about', _('Research Projects')),
           ('teachcanada.form_page', _('Feedback')) )}}
-          <li>
-            <div>
-            <button data-target="#side-navigation-toggle" data-toggle="collapse" class="side-toggle collapsed ttoggle"
-              type="button" aria-label="expand or collapse" aria-expanded="false" style="float: right;">
-              <span class="sr-only">{{ _('Toggle navigation') }}</span>
-              <span class="fa fa-bars " id="tgl"></span>
-            </button>
-            </div>
-          </li>
+          
+            <li class="btn-group bar-tabtoggle">
+              <button data-target="#side-navigation-toggle" data-toggle="dropdown" class="dropdown-toggle ttoggle2"
+                type="button" aria-expanded="false" aria-haspopup="true" style="border: none;background-color: white;">
+                <span class="sr-only">{{ _('Toggle navigation') }}</span>
+                <span class="fa fa-bars fa-3x" id="tgl2"></span>
+              </button>
+              <ul class="dropdown-menu pull-right">
+                {{ h.build_nav_main(
+                ('resourcebank.read', _('Resource Bank')),
+                ('participate.show', _('Ways TO Participate')),
+                ('forums.dataset', _('Community Forum')),
+                ('organization.index', _('Community partners')) ) }}   
+              </ul>
+            </li>
+          
           {% endblock %}
         </ul>
-        <div class="collapse" id="side-navigation-toggle">
-          <nav class="section navigation" >
-            <ul class="nav nav-pills">
-              
-            {{ h.build_nav_main(
-            ('resourcebank.read', _('Resource Bank')),
-            ('participate.show', _('Ways TO Participate')),
-            ('forums.dataset', _('Community Forum')),
-            ('organization.index', _('Community partners')) ) }}
-              
-            </ul>
-          </nav>
-        </div>
       </nav>
 
     </div>
