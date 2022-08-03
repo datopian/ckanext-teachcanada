@@ -15,13 +15,12 @@
     <div class="container border border-dark">
       <div class="row" style="margin-bottom: 20px;">
         <div class="col-md-6" style="height: 50%;margin-right: 60px;">
-          <img src="/base/images/student-teach.jpeg" class="img-fluid "
-          style="object-fit: cover; width: 100%; height:50%;">
+          <img src="/base/images/student-teach.jpeg" class="img-fluid img-body ">
         </div>
         <div class="col-md-5"  style="height:50%;">
-          <div style="padding: 0px 10px 10px 10px;">
+          <div class="article-spacing">
             <strong>BOOZHOO, WACHIYA, BIENVENUE, WELCOME</strong>
-            <article style="color: #ed1c24;margin: 50px 0px 70px 0px;font-size: xx-large; font-weight: bold;">Teach For Canada is a Non-profit organization that works with northern Nations to recreate and Support
+            <article class="b1-descp">Teach For Canada is a Non-profit organization that works with northern Nations to recreate and Support
               cooperation of teachers
             </article>
             <button class="btn btn-primary">Why a Data Portal</button>
@@ -30,137 +29,129 @@
       </div>
 
       <div class="row rows2">
-        <div class="col-md-3 col-md-offset-1 text-center"
-          style="padding: 2px;margin-bottom: 40px; margin-right: 10px;">
+        <div class="col-md-3 col-md-offset-1 text-center center-body">
           <div class="row">
-            <div class="col-md-12" style="padding:20px 10% 10px 10%;">
-              <div style="height:400px; width:250px;border-radius:200px 200px 200px 200px;
-              background: url('/base/images/SchoolData.jpg'); background-size:cover;background-repeat: no-repeat;">
+            <div class="col-md-12 center-body-spacing" >
+              <div class="oval-div" style="background: url('/base/images/SchoolData.jpg'); background-size:cover;background-repeat: no-repeat;">
               </div>
             </div>
           </div>
-          <div class="row" style="padding: 0px 10px 10px 10px;margin-bottom: 20px;">
+          <div class="row content-oval-div-spacing" >
             <h2><b>School Data</b></h2>
-            <div style="border:1px #ed1c24 solid;width:15%;margin:0px 40% 20px 40%;"></div>
+            <div class="content-divider"></div>
             <article>
               Teacher learn about First Nation Histories, cultures, language and contemporary realities
             </article>
           </div>
           <div class="row">
-            <a class="col-md-6 col-sm-offset-3  btn-danger" href="{{h.url_for('schooldata.page')}}" style="font-size: small;background-color: #FF0000;">
-              <b>TEACHER ADVICE</b>
+            <a class="col-md-6 col-sm-offset-3  btn-danger view-btn" href="{{h.url_for('schooldata.page')}}" >
+              <b>VIEW</b>
             </a>
           </div>
         </div>
-        <div class="col-md-3 text-center"
-          style="padding: 2px;margin-bottom: 40px; margin-right: 10px;">
+        <div class="col-md-3 text-center center-body">
           <div class="row">
-            <div class="col-md-12" style="padding:20px 10% 10px 10%;">
-              <div style="height:400px; width:250px;border-radius:200px 200px 200px 200px;
-              background: url('/base/images/Datasets-Image.jpg'); background-size:cover;background-repeat: no-repeat;">
+            <div class="col-md-12 center-body-spacing">
+              <div class="oval-div" style="background: url('/base/images/Datasets-Image.jpg'); background-size:cover;background-repeat: no-repeat;">
               </div>
             </div>
           </div>
-          <div class="row" style="padding: 0px 10px 10px 10px;margin-bottom: 20px;">
+          <div class="row content-oval-div-spacing">
             <h2><b>Datasets</b></h2>
-            <div style="border:1px #ed1c24 solid;width:15%;margin:0px 40% 20px 40%;"></div>
+            <div class="content-divider"></div>
             <article>
               Teacher learn about First Nation Histories, cultures, language and contemporary realities
             </article>
           </div>
           <div class="row">
-            <a class="col-md-6 col-sm-offset-3  btn-danger" href="{{h.url_for('dataset.search')}}" style="font-size: small;background-color: #FF0000;">
-              <b>TEACHER ADVICE</b>
+            <a class="col-md-6 col-sm-offset-3  btn-danger view-btn" href="{{h.url_for('dataset.search')}}" >
+              <b>VIEW</b>
             </a>
           </div>
         </div>
-        <div class="col-md-3 text-center"
-          style="padding: 2px;margin-bottom: 40px;">
+        <div class="col-md-3 text-center center-body">
           <div class="row">
-            <div class="col-md-12" style="padding:20px 10% 10px 10%;">
-              <div style="height:400px; width:250px;border-radius:200px 200px 200px 200px;
+            <div class="col-md-12 center-body-spacing">
+              <div class="oval-div" style="
               background: url('/base/images/Research-Projects.jpg'); background-size:cover;background-repeat: no-repeat;">
               </div>
             </div>
           </div>
-          <div class="row" style="padding: 0px 10px 10px 10px;margin-bottom: 20px;">
+          <div class="row content-oval-div-spacing" >
             <h2><b>Research Projects</b></h2>
-            <div style="border:1px #ed1c24 solid;width:15%;margin:0px 40% 20px 40%;"></div>
+            <div class="content-divider"></div>
             <article>
               Teacher learn about First Nation Histories, cultures, language and contemporary realities
             </article>
           </div>
           <div class="row">
-            <a class="col-md-6 col-sm-offset-3  btn-danger" href="{{h.url_for('resourcebank.read')}}" style="font-size: small;background-color: #FF0000;">
-              <b>TEACHER ADVICE</b>
+            <a class="col-md-6 col-sm-offset-3  btn-danger view-btn" href="{{h.url_for('resourcebank.read')}}" >
+              <b>VIEW</b>
             </a>
           </div>
         </div>
       </div>
       <div class="row row2" style="margin-bottom: 15px;">
-        <div class="col-md-3 col-md-offset-1 text-center"
-          style="padding: 2px;margin-bottom: 40px; margin-right: 10px;">
+        <div class="col-md-3 col-md-offset-1 text-center center-body">
           <div class="row">
-            <div class="col-md-12" style="padding:20px 10% 10px 10%;">
-              <div style="height:400px; width:250px;border-radius:200px 200px 200px 200px;
-              background: url('/base/images/WaystoParticipate.jpg'); background-size:cover;background-repeat: no-repeat;">
+            <div class="col-md-12 center-body-spacing">
+              <div class="oval-div">
+                <img src="/base/images/waystoP.png" class="oval-img"/>
               </div>
             </div>
           </div>
-          <div class="row" style="padding: 0px 10px 10px 10px;margin-bottom: 20px;">
+          <div class="row content-oval-div-spacing">
             <h2><b>Ways to Participate</b></h2>
-            <div style="border:1px #ed1c24 solid;width:15%;margin:0px 40% 20px 40%;"></div>
+            <div class="content-divider"></div>
             <article>
               Teacher learn about First Nation Histories, cultures, language and contemporary realities
             </article>
           </div>
           <div class="row">
-            <a class="col-md-6 col-sm-offset-3  btn-danger" href="{{h.url_for('participate.show')}}" style="font-size: small;background-color: #FF0000;">
-              <b>TEACHER ADVICE</b>
+            <a class="col-md-6 col-sm-offset-3  btn-danger view-btn" href="{{h.url_for('participate.show')}}" >
+              <b>VIEW</b>
             </a>
           </div>
         </div>
-        <div class="col-md-3 text-center"
-          style="padding: 2px;margin-bottom: 40px; margin-right: 10px;">
+        <div class="col-md-3 text-center center-body">
           <div class="row">
-            <div class="col-md-12" style="padding:20px 10% 10px 10%;">
-              <div style="height:400px; width:250px;border-radius:200px 200px 200px 200px;
-              background: url('/base/images/Resource-Bank.jpg'); background-size:cover;background-repeat: no-repeat;">
+            <div class="col-md-12 center-body-spacing">
+              <div class="oval-div">
+                <img src="/base/images/Resource-Bank.jpg" class="oval-img"/>
               </div>
             </div>
           </div>
-          <div class="row" style="padding: 0px 10px 10px 10px;margin-bottom: 20px;">
+          <div class="row content-oval-div-spacing">
             <h2><b>Resource Bank</b></h2>
-            <div style="border:1px #ed1c24 solid;width:15%;margin:0px 40% 20px 40%;"></div>
+            <div class="content-divider"></div>
             <article>
               Teacher learn about First Nation Histories, cultures, language and contemporary realities
             </article>
           </div>
           <div class="row">
-            <a class="col-md-6 col-sm-offset-3  btn-danger" href="{{h.url_for('resourcebank.read')}}" style="font-size: small;background-color: #FF0000;">
-              <b>TEACHER ADVICE</b>
+            <a class="col-md-6 col-sm-offset-3  btn-danger view-btn" href="{{h.url_for('resourcebank.read')}}">
+              <b>VIEW</b>
             </a>
           </div>
         </div>
-        <div class="col-md-3 text-center"
-          style="padding: 2px;margin-bottom: 40px;">
+        <div class="col-md-3 text-center center-body">
           <div class="row">
-            <div class="col-md-12" style="padding:20px 10% 10px 10%;">
-              <div style="height:400px; width:250px;border-radius:200px 200px 200px 200px;
-              background: url('/base/images/Community-Forum.jpg'); background-size:cover;background-repeat: no-repeat;">
+            <div class="col-md-12 center-body-spacing">
+              <div class="oval-div">
+                <img src="/base/images/Community-Forum.jpg" class="oval-img"/>
               </div>
             </div>
           </div>
-          <div class="row" style="padding: 0px 10px 10px 10px;margin-bottom: 20px;">
+          <div class="row content-oval-div-spacing">
             <h2><b>Community Forum</b></h2>
-            <div style="border:1px #ed1c24 solid;width:15%;margin:0px 40% 20px 40%;"></div>
+            <div class="content-divider"></div>
             <article>
               Teacher learn about First Nation Histories, cultures, language and contemporary realities
             </article>
           </div>
           <div class="row">
-            <a class="col-md-6 col-sm-offset-3  btn-danger" href="{{h.url_for('teachcanada.form_page')}}" style="font-size: small;background-color: #FF0000;">
-              <b>TEACHER ADVICE</b>
+            <a class="col-md-6 col-sm-offset-3  btn-danger view-btn" href="{{h.url_for('teachcanada.form_page')}}" >
+              <b>VIEW</b>
             </a>
           </div>
         </div>

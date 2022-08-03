@@ -65,43 +65,68 @@
   <div class="debug">Controller : {{ c.controller }}<br />Action : {{ c.action }}</div>
   {% endif %} {% endblock %}
   <div class="container">
-    <div class="navbar-right" style="float: right;margin-top: 6px;">
-      <div class="btn-group">
-        <button data-target="#side-navigation-toggle" data-toggle="dropdown" class="dropdown-toggle ttoggle"
-          type="button" aria-expanded="false" aria-haspopup="true" style="border: none;background-color: white;">
-          <span class="sr-only">{{ _('Toggle navigation') }}</span>
-          <span class="fa fa-bars fa-3x" id="tgl"></span>
-        </button>
-        {% block header_site_navigation %}
-        <ul class="dropdown-menu navbar-float" style="color: black;">
-          {% block header_site_navigation_tabs %}
-          {{ h.build_nav_main(
-          ('schooldata.page', _('School Data')),
-          ('dataset.search', _('Datasets')),
-          ('home.about', _('Research Projects')),
-          ('teachcanada.form_page', _('Feedback')),
-          ('resourcebank.read', _('Resource Bank')),
-          ('participate.show', _('Ways TO Participate')),
-          ('forums.dataset', _('Community Forum')),
-          ('organization.index', _('Community partners')) ) }}
-          {% endblock %}
-        </ul>
-      {% endblock %}
+    <div class="row" >
+      <div class="col-md-6">
+        <hgroup class="{{ g.header_class }} navbar-left">
+          {% block header_logo %} {% if g.site_logo %}
+          <a class="logo" href="{{ h.url_for('home.index') }}"><img src="/base/images/ckan-logo.png"
+              alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a>
+          {% else %}
+          <h1>
+            <a href="{{ h.url_for('home.index') }}">{{ g.site_title }}</a>
+          </h1>
+          {% if g.site_description %}
+          <h2>{{ g.site_description }}</h2>{% endif %} {% endif %} {% endblock %}
+        </hgroup>    
       </div>
-      
+        <div class="col-md-6">
+          <div class="col-md-10" style="color: black;height: 50px;padding-top: 0px;border-right: 1px solid black;padding-right: 0px;">
+              <form class=" search-form" id="search" method="get" action="{% url_for 'dataset.search' %}" style="margin-top: 0px;height: 60%;float: right;display: none;">
+                <div class="input-group search-input-group" style="margin-top: 6px;">
+                  <input style="height: 80%;" aria-label="{% block header_site_search_label %}{{ placeholder }}{% endblock %}" id="field-giant-search" type="text" class="form-control input-lg" name="q" value="{{ query }}" autocomplete="off" placeholder="{{ placeholder }}">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default btn-lg" id="cancel" >
+                      <i class="fa fa-times"></i>
+                    </button>
+                  </span>
+                </div>
+              </form>
+              <button aria-labelledby="search-label" id="searchicon" style="background-color: transparent; border: none;float: right;margin-top: 10px;margin-right: 12px;">
+                <i class="fa fa-search fa-2x"></i>
+                <span class="sr-only" id="search-label">{{ _('Search') }}</span>
+              </button>
+          </div>
+          <div class="col-md-2" style="padding-left: 10px;">
+            <div style="margin-top: 6px;">
+              <div class="btn-group">
+                <button data-target="#side-navigation-toggle" data-toggle="dropdown" class="dropdown-toggle ttoggle"
+                  type="button" aria-expanded="false" aria-haspopup="true" style="border: none;background-color: white;">
+                  <span class="sr-only">{{ _('Toggle navigation') }}</span>
+                  <span class="fa fa-bars fa-3x" id="tgl"></span>
+                </button>
+                {% block header_site_navigation %}
+                <ul class="dropdown-menu navbar-float" style="color: black;">
+                  {% block header_site_navigation_tabs %}
+                  {{ h.build_nav_main(
+                  ('schooldata.page', _('School Data')),
+                  ('dataset.search', _('Datasets')),
+                  ('home.about', _('Research Projects')),
+                  ('teachcanada.form_page', _('Feedback')),
+                  ('resourcebank.read', _('Resource Bank')),
+                  ('participate.show', _('Ways TO Participate')),
+                  ('forums.dataset', _('Community Forum')),
+                  ('organization.index', _('Community partners')) ) }}
+                  {% endblock %}
+                </ul>
+              {% endblock %}
+              </div>
+              
+            </div>
+          </div>
+          
+      </div>
+    
     </div>
-    <hgroup class="{{ g.header_class }} navbar-left">
-      {% block header_logo %} {% if g.site_logo %}
-      <a class="logo" href="{{ h.url_for('home.index') }}"><img src="/base/images/ckan-logo.png"
-          alt="{{ g.site_title }}" title="{{ g.site_title }}" /></a>
-      {% else %}
-      <h1>
-        <a href="{{ h.url_for('home.index') }}">{{ g.site_title }}</a>
-      </h1>
-      {% if g.site_description %}
-      <h2>{{ g.site_description }}</h2>{% endif %} {% endif %} {% endblock %}
-    </hgroup>
-
     
   </div>
 </header>
