@@ -2,14 +2,8 @@
 {% set placeholder = _('E.g. search') %}
 
 <div class="module module-search module-narrow module-shallow box">
-  <form class="module-content search-form" method="get" action="{% url_for 'dataset.search' %}">
+  <div class="module-content search-form" >
     <strong><h1 class="heading" style="color: white;font-weight: bolder;text-shadow: 1px 0 #888888;letter-spacing:1px;">{{ _("Welcome to the Teach For Canada Data Portal!") }}</h1></strong>
-    <div class="search-input form-group search-giant " style="width: 60%;">
-      <input aria-label="{% block header_site_search_label %}{{ _('Search datasets') }}{% endblock %}" id="field-main-search" type="text" class="control-medium" name="q" value="" autocomplete="off" placeholder="{% block search_placeholder %}{{ placeholder }}{% endblock %}" />
-      <button type="submit" aria-labelledby="search-label">
-        <i class="fa fa-search"></i>
-        <span class="sr-only" id="search-label">{{ _('Search') }}</span>
-      </button>
-    </div>
-  </form>
+  </div>
+   
 </div>
