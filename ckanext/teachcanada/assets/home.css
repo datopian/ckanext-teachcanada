@@ -1074,12 +1074,19 @@ button.active {
 .content-oval-div-spacing {
   padding: 0px 10px 10px 10px;
   margin-bottom: 20px;
+  height: 180px;
 }
 
 .content-divider {
   border:1px #ed1c24 solid;
   width:15%;
   margin:0px 40% 20px 40%;
+}
+
+.article-spacing {
+  font-size: smaller;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .view-btn {
