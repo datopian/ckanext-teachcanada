@@ -41,6 +41,18 @@ def addresourcebank():
 
 
 
+@teachcanada.command()
+def addabout():
+    metadata = meta.metadata
+    ckanext_pages = metadata.tables['ckanext_pages']
+    query = ckanext_pages.insert().values(
+        title="About", name="about",
+        private=False
+    )
+    connection = model.Session.connection()
+    connection.execute(query)
+    model.Session.commit()
+    click.secho(u"About added to ckanext_pages Table", fg=u"green")
 
 
 
