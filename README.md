@@ -2,7 +2,6 @@
 
 Ckan Extension: Teach for Canada
 
-
 ## Commands
 
 To add ways to participate
@@ -21,4 +20,10 @@ To add ckanext-forum table
 
 ```
 ckan -c ckan.ini forumsdb
+```
+
+To add About page
+
+```
+ckan -c ckan.ini teachcanada addabout
 ```
