@@ -10,14 +10,11 @@
 
 
 {% block primary_content_inner %}
-<script type='text/javascript' src='https://prod-ca-a.online.tableau.com/javascripts/api/viz_v1.js'></script>
-<div class='tableauPlaceholder'  style="font-size: small;" >
-  <object class='tableauViz' width='970px' height="1000px" style='display:none;font-size: small;'>
-    <param name='host_url' value='https%3A%2F%2Fprod-ca-a.online.tableau.com%2F' /> 
-    <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;communitypartnerdataportal' />
-    <param name='name' value='Biweekly_Survey_Dashboard&#47;BiweeklyStory&#47;e06b2992-1ec6-4395-8e65-798eb4fa12e1&#47;BiweeklyStory' />
-    <param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showAppBanner' value='false' />
-  </object>
+<script type='module' src='https://prod-ca-a.online.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js'></script>
+<div class='tableauPlaceholder'  width='1920px' height="913px" style="font-size: small;" >
+ <script type='module' src='https://prod-ca-a.online.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js'></script>
+  <tableau-viz id='tableau-viz' src='https://prod-ca-a.online.tableau.com/t/communitypartnerdataportal/views/CPDataPortalStory/MonthlySurveyStory/d04e4450-cf2d-4e96-ac0d-2f01c3e671db/MonthlySurveyStory' width='1920' height='913' hide-tabs toolbar='bottom'>
+  </tableau-viz>
 </div>
 {% endblock %}
 
@@ -40,11 +37,19 @@
     </p>
   </div>
 </div>
-
 {% block style %}
   <style>
     .row.wrapper {
-      width: 1360px !important;
+     width: 2200px !important;
+    }
+    .wrapper::before {
+       width: 15%;
+    }
+    .secondary.col-sm-3 {
+       width: 15%;
+     }
+    .primary.col-sm-9 {
+       width: 84%;
     }
   </style>
 {% endblock%}
