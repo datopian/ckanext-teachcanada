@@ -66,13 +66,9 @@
       {% endblock %}
     #}
     {%- block styles %}
-
-      {# TODO: store just name of asset instead of path to it. #}
-      {% set main_css = h.get_rtl_css() if h.is_rtl_language() else g.main_css %}
-      {# strip '/base/' prefix and '.css' suffix #}
-      {% asset main_css[6:-4] %}
-
-
+      {# CKAN 2.11 uses g.theme instead of g.main_css #}
+      {% set theme = h.get_rtl_theme() if h.is_rtl_language() else g.theme %}
+      {% asset theme %}
     {% endblock %}
 
     {% asset 'teachcanada/home_css' %}      
