@@ -1,9 +1,10 @@
 from ckan.views.group import  (
-    read, activity, about,
+    read, about,
     members, MembersGroupView,
     BulkProcessView, DeleteGroupView,
     EditGroupView
     )
+from ckanext.activity.views import group_activity
 from flask import Blueprint
 
 resourcebank = Blueprint(u'resourcebank', __name__, url_prefix=u'/group',
@@ -22,7 +23,7 @@ def register_group_plugin_rules(blueprint):
     blueprint.add_url_rule(
         u'/edit/<id>', view_func=EditGroupView.as_view(str(u'edit')))
     blueprint.add_url_rule(
-        u'/activity/<id>/<int:offset>', methods=[u'GET'], view_func=activity)
+        u'/activity/<id>/<int:offset>', methods=[u'GET'], view_func=group_activity)
     blueprint.add_url_rule(u'/about/<id>', methods=[u'GET'], view_func=about)
     blueprint.add_url_rule(
         u'/members/<id>', methods=[u'GET', u'POST'], view_func=members)
