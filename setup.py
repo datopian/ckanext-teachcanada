@@ -85,6 +85,7 @@ setup(
     entry_points='''
         [ckan.plugins]
         teachcanada=ckanext.teachcanada.plugin:TeachCanadaPlugin
+        teachcanada_auth_logging=ckanext.teachcanada.auth_logging:AuthLoggingPlugin
 
         [babel.extractors]
         ckan = ckan.lib.extract:extract_ckan
