@@ -66,7 +66,7 @@
   {% endif %} {% endblock %}
   <div class="container">
     <div class="row g-0" >
-      <div class="col-md-6">
+      <div class="col-lg-6">
         <hgroup class="{{ g.header_class }} navbar-left">
           {% block header_logo %} {% if g.site_logo %}
           <a class="logo" href="{{ h.url_for('home.index') }}"><img src="/base/images/ckan-logo.jpg"
@@ -79,9 +79,9 @@
           <h2>{{ g.site_description }}</h2>{% endif %} {% endif %} {% endblock %}
         </hgroup>    
       </div>
-        <div class="col-md-6">
+        <div class="col-lg-6">
           <div class="row g-0">
-            <div class="col-md-10" style="color: black;height: 50px;padding-top: 0px;border-right: 1px solid black;padding-right: 0px;">
+            <div class="col-lg-10" style="color: black;height: 50px;padding-top: 0px;border-right: 1px solid black;padding-right: 0px;">
               <form class=" search-form" id="search" method="get" action="{% url_for 'dataset.search' %}" style="margin-top: 0px;height: 60%;float: right;display: none;">
                 <div class="input-group search-input-group" style="margin-top: 6px;">
                   <input style="height: 80%;" aria-label="{% block header_site_search_label %}{{ placeholder }}{% endblock %}" id="field-giant-search" type="text" class="form-control input-lg" name="q" value="{{ query }}" autocomplete="off" placeholder="{{ placeholder }}">
@@ -96,7 +96,7 @@
                 <span class="sr-only" id="search-label">{{ _('Search') }}</span>
               </button>
           </div>
-          <div class="col-md-2" style="padding-left: 10px;">
+          <div class="col-lg-2" style="padding-left: 10px;">
             <div style="margin-top: 6px;">
               <div class="dropdown keep-open btn-group">
                 <button data-bs-target="#side-navigation-toggle" data-bs-toggle="dropdown" class="dropdown-toggle ttoggle"

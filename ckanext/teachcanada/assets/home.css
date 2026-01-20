@@ -136,7 +136,7 @@ img {
     }
 }
 .hero {
-    padding: 100px 0 85px 0;
+    padding: 100px 0 85px 0 !important;
     background-color: #00274a !important;
     background-image: url("/base/images/springbanner5.jpg") !important;
     background-repeat: no-repeat;
@@ -1099,7 +1099,14 @@ button.active {
 .content-divider {
     border: 1px #ed1c24 solid;
     width: 15%;
-    margin: 0px 40% 20px 40%;
+    margin: 8px 40% 8px 40%;
+    padding: 0 !important;
+}
+
+@media (max-width: 991px) {
+    .row > a.btn-danger.view-btn {
+        width: auto;
+    }
 }
 
 .article-spacing {
