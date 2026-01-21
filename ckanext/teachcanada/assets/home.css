@@ -1352,7 +1352,7 @@ label {
     clear: both;
     font-weight: 400;
     line-height: 1.42857143;
-    color: #333333 !important;
+    color: #333333;
     white-space: nowrap;
     text-decoration: none !important;
 }
@@ -1362,4 +1362,9 @@ label {
     color: #262626 !important;
     text-decoration: none !important;
     background-color: #f5f5f5 !important;
+}
+
+ul.bold-items > li > a {
+    color: #000 !important;
+    font-weight: 700 !important;
 }
