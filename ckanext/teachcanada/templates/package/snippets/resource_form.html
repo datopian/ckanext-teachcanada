@@ -16,6 +16,7 @@
 
   {% block errors %}{{ form.errors(error_summary) }}{% endblock %}
 
+  {{ h.csrf_input() }}
   <input name="id" value="{{ data.id }}" type="hidden"/>
 
   {% block basic_fields %}

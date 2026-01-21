@@ -8,6 +8,7 @@ then itself be extended to add/remove blocks of functionality. #}
     {{ h.snippet('package/snippets/stages.html', stages=stage) }}
   {% endblock %}
 
+  {{ h.csrf_input() }}
   <input type="hidden" name="_ckan_phase" value="dataset_new_1" />
   {# pkg_name used in 3 stage edit #}
   <input type="hidden" name="pkg_name" value="{{ data.id }}" />
