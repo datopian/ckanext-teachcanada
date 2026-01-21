@@ -1063,6 +1063,82 @@ button.active {
     height: 50%;
 }
 
+label {
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.input-group-addon {
+    padding: 6px 12px;
+    padding-top: 9px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: #555555;
+    text-align: center;
+    background-color: #eeeeee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.label {
+    display: inline;
+    padding: 0.2em 0.6em 0.3em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25em;
+}
+
+.label[data-format="html"],
+.label[data-format*="html"] {
+    background-color: #2e759e;
+}
+.label[data-format="json"],
+.label[data-format*="json"] {
+    background-color: #d63b00;
+}
+.label[data-format="xml"],
+.label[data-format*="xml"] {
+    background-color: #d63b00;
+}
+.label[data-format="text"],
+.label[data-format*="text"] {
+    background-color: #1a7ea3;
+}
+.label[data-format="csv"],
+.label[data-format*="csv"] {
+    background-color: #856a00;
+}
+.label[data-format="xls"],
+.label[data-format*="xls"] {
+    background-color: #207e42;
+}
+.label[data-format="zip"],
+.label[data-format*="zip"] {
+    background-color: #686868;
+}
+.label[data-format="api"],
+.label[data-format*="api"] {
+    background-color: #d22d81;
+}
+.label[data-format="pdf"],
+.label[data-format*="pdf"] {
+    background-color: #e0051e;
+}
+.label[data-format="rdf"],
+.label[data-format*="rdf"],
+.label[data-format*="nquad"],
+.label[data-format*="ntriples"],
+.label[data-format*="turtle"] {
+    background-color: #0b4498;
+}
+
 .b1-descp {
     color: #ed1c24;
     margin: 15px 0px 70px 0px;

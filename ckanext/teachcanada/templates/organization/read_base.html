@@ -15,8 +15,9 @@
 
 {% block content_primary_nav %}
   {{ h.build_nav_icon(group_type + '.read', _('Datasets'), id=group_dict.name, icon='sitemap') }}
-  {{ h.build_nav_icon(group_type + '.activity', _('Activity Stream'), id=group_dict.name, offset=0, icon='clock-o') }}
+  {# Activity Stream tab removed - let CKAN activity plugin provide it #}
   {{ h.build_nav_icon(group_type + '.about', _('About'), id=group_dict.name, icon='info-circle') }}
+  {{ super() }}
 {% endblock %}
 
 {% block secondary_content %}
