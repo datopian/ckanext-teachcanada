@@ -4,9 +4,17 @@ $(document).ready(()=>{
     $('#tgl').toggleClass('fa-bars fa-times');
   })
 
-  $(".ttoggle2").click(()=>{
-    $('#tgl2').toggleClass('fa-bars fa-times');
-  })
+  // Remove the manual click handler for ttoggle2 - let Bootstrap events handle it
+  // Listen for Bootstrap dropdown events to sync the icon
+  $('.ttoggle2').parent('.dropdown').on('shown.bs.dropdown', function() {
+    // When dropdown opens, ensure icon is X
+    $('#tgl2').removeClass('fa-bars').addClass('fa-times');
+  });
+
+  $('.ttoggle2').parent('.dropdown').on('hidden.bs.dropdown', function() {
+    // When dropdown closes, ensure icon is bars
+    $('#tgl2').removeClass('fa-times').addClass('fa-bars');
+  });
 
   $("#cancel").click((e)=> {
     e.preventDefault();

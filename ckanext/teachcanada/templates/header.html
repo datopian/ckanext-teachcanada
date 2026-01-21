@@ -118,8 +118,10 @@
             <div class="text-uppercase col-lg-8" id="main-navigation-toggle">
                 <div class="row g-0 align-items-center">
                     {% block header_site_navigation %}
-                    <nav class="section navigation col-lg-10">
-                        <ul class="nav nav-pills gap-lg-5 gap-md-3">
+                    <nav class="section navigation col-lg-10 mt-4 mt-lg-0">
+                        <ul
+                            class="nav nav-pills gap-lg-5 gap-3 flex-column flex-lg-row"
+                        >
                             {% block header_site_navigation_tabs %} {{
                             h.build_nav_main( ('schooldata.page', _('School
                             Data')), ('dataset.search', _('Datasets')),
@@ -130,7 +132,7 @@
                     </nav>
 
                     <div
-                        class="dropdown keep-open btn-group col-lg-2 justify-content-end"
+                        class="dropdown keep-open btn-group col-lg-2 justify-content-lg-end mt-2 mt-lg-0"
                     >
                         <button
                             data-bs-target="#side-navigation-toggle"
